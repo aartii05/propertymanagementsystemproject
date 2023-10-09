@@ -1,0 +1,18 @@
+<div class="container">
+  <h2>Property Details</h2>
+
+
+  <div *ngIf="errorMessage" class="alert alert-danger">
+    {{ errorMessage }}
+  </div>
+
+
+  <div *ngIf="property">
+    <p><strong>Address:</strong> {{ property.address }}</p>
+    <p><strong>Price (USD):</strong> {{ property.price | currency: 'USD' }}</p>
+    <p><strong>Bedrooms:</strong> {{ property.bedrooms }}</p>
+    <p><strong>Bathrooms:</strong> {{ property.bathrooms }}</p>
+
+  </div>
+</div>
+

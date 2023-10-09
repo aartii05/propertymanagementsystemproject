@@ -1,0 +1,27 @@
+<!-- Display the list of properties -->
+<div *ngIf="!loading && !errorMessage">
+  <table class="table table-bordered">
+    <thead>
+    <tr>
+      <th>Address</th>
+      <th>Price</th>
+      <th>Bedrooms</th>
+      <th>Bathrooms</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let property of properties">
+      <td>{{ property.address }}</td>
+      <td>{{ property.price | currency: 'USD' }}</td>
+      <td>{{ property.bedrooms }}</td>
+      <td>{{ property.bathrooms }}</td>
+      <td>
+        <a [routerLink]="['/view-property', property.id]" class="btn btn-info btn-sm">View</a>
+        <a [routerLink]="['/edit-property', property.id]" class="btn btn-warning btn-sm">Edit</a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+

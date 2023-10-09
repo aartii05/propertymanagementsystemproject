@@ -1,0 +1,57 @@
+<div class="container">
+  <h2>Add New Property</h2>
+
+
+  <div *ngIf="errorMessage" class="alert alert-danger">
+    {{ errorMessage }}
+  </div>
+
+
+
+  <form [formGroup]="propertyForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="address">Address</label>
+
+      <input type="text" id="address" class="form-control" formControlName="address" required>
+      <div *ngIf="propertyForm.get('address').hasError('required')" class="text-danger">
+        Address is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="price">Price (USD)</label>
+      <input type="number" id="price" class="form-control" formControlName="price" required>
+      <div *ngIf="propertyForm.get('price').hasError('required')" class="text-danger">
+        Price is required.
+      </div>
+      <div *ngIf="propertyForm.get('price').hasError('min')" class="text-danger">
+        Price must be a positive number.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="bedrooms">Bedrooms</label>
+      <input type="number" id="bedrooms" class="form-control" formControlName="bedrooms" required>
+      <div *ngIf="propertyForm.get('bedrooms').hasError('required')" class="text-danger">
+        Bedrooms is required.
+      </div>
+      <div *ngIf="propertyForm.get('bedrooms').hasError('min')" class="text-danger">
+        Bedrooms must be a positive number.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="bathrooms">Bathrooms</label>
+      <input type="number" id="bathrooms" class="form-control" formControlName="bathrooms" required>
+      <div *ngIf="propertyForm.get('bathrooms').hasError('required')" class="text-danger">
+        Bathrooms is required.
+      </div>
+      <div *ngIf="propertyForm.get('bathrooms').hasError('min')" class="text-danger">
+        Bathrooms must be a positive number.
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add Property</button>
+  </form>
+</div>
+
