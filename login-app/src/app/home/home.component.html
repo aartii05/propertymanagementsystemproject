@@ -1,0 +1,26 @@
+<mat-drawer-container class="example-container" style="height:100%;">
+  <mat-drawer mode="side" opened>
+    <div>
+      <button class="btn-min-width-margin" color="primary" mat-raised-button routerLink="/home">Home</button>
+    </div>
+    <div>
+      <button class="btn-min-width-margin" color="primary" mat-raised-button routerLink="/home/getProperties">View Properties</button>
+    </div>
+    <div>
+      <button class="btn-min-width-margin" color="primary" mat-raised-button routerLink="/home/addProperties">Add Properties</button>
+    </div>
+
+    <div>
+      <button class="btn-min-width-margin" color="primary" mat-raised-button routerLink="/home/updateProperties">Update Properties</button>
+    </div>
+  </mat-drawer>
+
+  <mat-drawer-content >
+
+    <div *ngIf="showIntro" class="home-div" >
+      Welcome!!
+    </div>
+    <router-outlet>
+    </router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>

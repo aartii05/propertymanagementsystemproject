@@ -1,0 +1,36 @@
+<div class="container">
+  <h2>Register</h2>
+  <form (ngSubmit)="registerUser()" class="registration-form">
+    <div class="form-field">
+      <mat-form-field>
+        <mat-label>Username</mat-label>
+        <input matInput type="text" [(ngModel)]="username" name="username" required>
+      </mat-form-field>
+    </div>
+
+    <div class="form-field">
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input matInput type="password" [(ngModel)]="password" name="password" required>
+      </mat-form-field>
+    </div>
+
+    <div class="form-field">
+      <button mat-raised-button color="primary" type="submit">Register</button>
+    </div>
+  </form>
+
+  <!-- Display error message here -->
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+
+  <!-- Display success message here -->
+  <div *ngIf="registrationSuccess" class="success-message">
+    User registered successfully.
+  </div>
+</div>
+
+
+
+

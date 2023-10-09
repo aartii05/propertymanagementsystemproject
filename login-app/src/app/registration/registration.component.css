@@ -1,0 +1,38 @@
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+h2 {
+  color: #333; /* Change the heading color */
+}
+
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-field {
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 300px;
+  text-align: left;
+}
+
+/* Styling for the success message */
+.success-message {
+  color: #00a000; /* Green color for success message */
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Styling for the error message */
+.error-message {
+  color: #ff0000; /* Red color for error message */
+  font-weight: bold;
+  margin-top: 10px;
+}
+

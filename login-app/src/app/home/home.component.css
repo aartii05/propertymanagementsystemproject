@@ -1,0 +1,32 @@
+.demo-table {
+  width: 80%;
+}
+
+.mat-mdc-row .mat-mdc-cell {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+  cursor: pointer;
+}
+
+.mat-mdc-row:hover .mat-mdc-cell {
+  border-color: currentColor;
+}
+
+.demo-row-is-clicked {
+  font-weight: bold;
+}
+.mat-drawer{
+  width:20%;
+}
+.home-div{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  margin-top: 40px;
+  }
+.btn-min-width-margin{
+  min-width:85%;
+  margin:10px
+}

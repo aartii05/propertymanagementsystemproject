@@ -1,0 +1,32 @@
+
+<div class="container">
+  <h1 style="color: black">User Login</h1>
+  <form (ngSubmit)="userLogin()">
+    <mat-form-field class="mb-3">
+      <mat-label>Enter Username</mat-label>
+      <input matInput type="text" [(ngModel)]="username" id="userId" name="userId">
+    </mat-form-field>
+<p></p>
+    <mat-form-field class="mb-3">
+      <mat-label>Enter Password</mat-label>
+      <input matInput type="password" [(ngModel)]="password" id="password" name="password">
+    </mat-form-field>
+    <p></p>
+    <button mat-raised-button color="primary" type="submit" style="margin-right:20px">Login</button>
+    <button mat-raised-button color="accent" type="button" (click)="redirectToRegistration()">Register</button>
+  </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
